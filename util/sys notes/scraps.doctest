@@ -1,0 +1,110 @@
+
+
+Github, Pythonista 3.2, Working Copy 3.2.2, iOS 11.2.1
+
+Settings:
+1) Settings => Identities => + => Name and Email (...@user.noreply.github.com)
+2) SSH Keys => + => Generate Key => Connect with GitHub
+
+Clone:
+1) + => Clone repository => Choose one of your repos or Enter URL (git@github.com:user/repo.git) => Clone
+
+Edit repo in Pythonista:
+1a) Open Pythonista => + => Import => Files => Working Copy (first time => search => enable) => Select Folder => Open (Copy repo to Pythonista)
+OR
+1b) Open Pythonista => External Files => Open... => Working Copy (first time => search => enable) => Select Folder => Open (Link repo)
+
+Push repo:
+1a) Edit => Selcet Folder in Pythonista => Open In => Save in Working Copy (first time => enable it) => Save as directory => Choose your repo
+OR
+1b) Edit your repo via Pythonista in your Working Copy folder
+2) Open Working Copy => Open repo => Commit changes => select your file or all => short summary => Commit
+
+Initialize repository:
+1) + => Initialize repository
+2) Repository Name => Create
+3) Add Remote
+4) Create Repository
+5) Github => Public => Confirm Create
+6) Create/Import files
+7) Commit changes => select your file or all => short summary => Commit
+
+Remove repository from your device:
+1) Open the repo folder
+2) Delete from iPxxx
+=> repo still exists at Github
+
+Update repos:
+1) Just swipe down in the Repositories view
+
+
+
+
+https://github.com/humberry/WorkingCopy
+https://github.com/cclauss/Pythonista-and-Working-Copy/blob/master/README.md
+
+
+
+
+
+
+Tip: Show detailed traceback when a script fails with stashconf py_traceback 1
+
+import requests as r; exec(r.get('http://bit.ly/get-stash').text)
+https://forum.omz-software.com/topic/3873/how-do-you-install-modules-into-the-app
+
+
+
+
+
+https://forum.omz-software.com/topic/3873/how-do-you-install-modules-into-the-app
+
+ 0
+@paultrott Provided the module is one that will run under Pythonista (Pure Python, etc.), you can type pip install modulename and see if the module works.
+
+  ccc
+posted about a year ago
+ 0
+Once you have successfully installed StaSH then you need to reboot Pythonista and open the launch_stash.py script and run it. You should then be able to type pip -h.
+
+
+
+
+
+
+
+# Doctest
+
+You can use a doctest file to run automated tests that are embedded in documentation or other comments. When you run this file (by tapping the ▷ button), the `doctest` module searches for pieces of text that look like interactive Python sessions, and executes those sessions to verify that they work exactly as shown.
+
+Here's an example:
+
+	>>> 6 * 7
+	42
+
+To test multi-line statements, use `...` as the prefix for the additional lines:
+
+	>>> def hello(name):
+	...     return 'Hello ' + name
+	>>> hello('World')
+	'Hello World'
+
+You can use Markdown formatting (e.g. **bold**, *italic*) in the text surrounding the actual tests. While not strictly required, it is recommended that you indent code blocks (the test cases) with one tab or 4 spaces, so that they are recognized as code when you convert the Markdown to HTML. This also ensures that the code is syntax-highlighted in Pythonista.
+
+You can also run doctests that are contained in actual docstrings of a regular Python file (module). To do that, tap and hold the ▷ button, and select "Run Doctests".
+
+To learn more about doctests, please refer to the `doctest` module documentation.
+
+
+
+
+
+ 1
+I have this simple alias in .stashrc. It adds, commits and pushes all modified files.
+
+alias gup='git add `git modified`; git commit; git push'
+
+
+
+
+You can redirect output to Pythonista console, e.g. ls > &3
