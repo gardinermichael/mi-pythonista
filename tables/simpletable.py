@@ -4,15 +4,6 @@
 # Aug 23, 2018 at 7:29 AM
 # 
 # 
-
-
-
-
-test
-
-
-
-
 # 
 # simple table
 import ui, console
