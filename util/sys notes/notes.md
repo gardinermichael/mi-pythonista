@@ -62,5 +62,6 @@ time.sleep(0.2)
 	
 __________________________________________________
 
-
+git config credential.helper store
+git pull
 
