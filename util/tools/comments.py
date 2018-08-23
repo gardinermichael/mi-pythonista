@@ -20,11 +20,5 @@ editor.replace_text(selection[0], selection[1], replacement)
 editor.set_selection(selection[0], selection[0] + len(replacement) - 1)
 
 
-testing
 
-
-testing 
-
-
-twsting
 
